@@ -80,7 +80,7 @@
       const list = document.getElementById('postList');
       if (!list) return;
 
-      fetch('posts/manifest.json')
+      fetch('/posts/manifest.json')
         .then(r => r.json())
         .then(posts => {
           const loadingEl = document.getElementById('loadingState');
@@ -133,7 +133,7 @@
       const list = document.getElementById('profilePostList');
       if (!list) return;
 
-      fetch('posts/manifest.json')
+      fetch('/posts/manifest.json')
         .then(r => r.json())
         .then(posts => {
           const loadingEl = document.getElementById('loadingState');
@@ -189,13 +189,13 @@
       }
 
       // Load manifest to get post metadata
-      fetch('posts/manifest.json')
+      fetch('/posts/manifest.json')
         .then(r => r.json())
         .then(posts => {
           const meta = posts.find(p => p.slug === slug);
 
           // Load markdown file
-          return fetch(`posts/${slug}.md`).then(r => {
+          return fetch(`/posts/${slug}.md`).then(r => {
             if (!r.ok) throw new Error('Post not found');
             return r.text();
           }).then(md => ({ md, meta }));
