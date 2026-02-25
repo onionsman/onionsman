@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="system">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onionsman</title>
+  <meta name="description" content="Vulnerable opinion shaping survival, experience, and humanity">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=geist:300,400,500,600|geist-mono:400" rel="stylesheet">
+
+  <!-- Oat UI -->
+  <link rel="stylesheet" href="https://unpkg.com/@knadh/oat/oat.min.css">
+  <script src="https://unpkg.com/@knadh/oat/oat.min.js" defer></script>
+
+  <!-- Marked.js for markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- Custom theme -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Onionsman home">Onionsman</a>
+      <div class="nav-links">
+        <a href="/profile.html">About</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle light/dark/system">
+          <span class="theme-icon"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main id="main-content" class="main-container post-page">
+    <!-- Back link -->
+    <a href="/" class="back-link" aria-label="Back to all posts">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      All posts
+    </a>
+
+    <!-- Post meta + content -->
+    <article id="postContent" role="article">
+      <!-- Populated by app.js -->
+      <div class="loading-state" id="loadingState" role="status" aria-live="polite">
+        <span class="skeleton-line title-skeleton"></span>
+        <span class="skeleton-line short"></span>
+        <br>
+        <span class="skeleton-line"></span>
+        <span class="skeleton-line"></span>
+        <span class="skeleton-line short"></span>
+      </div>
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <span class="footer-copy">&copy; <span id="footerYear"></span> Onionsman</span>
+      <div class="footer-links">
+        <a href="/profile.html">About</a>
+        <a href="https://x.com/onionsman" target="_blank" rel="noopener noreferrer">X</a>
+        <a href="https://github.com/onionsman" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/app.js"></script>
+</body>
+</html>
